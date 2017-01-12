@@ -1,0 +1,72 @@
+page {
+    background: #f0f1f1;
+}
+.login-wrap {
+    padding-top: 50rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-bottom: 100rpx;
+}
+.input-wrap {
+    margin-bottom: 20rpx;
+    height: 90rpx;
+    background: #fff;
+    border: 1rpx solid #d2d2d7;
+    border-radius: 15rpx;
+}
+.input-wrap input {
+    height: 60rpx;
+    padding-left: 10rpx;
+    font-size: 28rpx;
+    flex: 1;
+}
+.input-wrap button {
+    margin-right: 10rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    background: #999;
+    border: 0;
+    color: #fff;
+}
+.login {
+    margin-top: 80rpx;
+    margin-bottom: 60rpx;
+    height: 90rpx;
+    background: #f3e7c1;
+    color: #5d5028;
+    border: none;
+}
+.url-wrap navigator {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    color: #4ec9f1;
+    border-bottom: 1rpx solid #4ec9f1;
+}
+.pwd-login {
+    margin-left: 200rpx;
+}
+.register {
+    margin-right: 200rpx;
+}
+.line-wrap {
+    margin-top: 220rpx;
+}
+.line-wrap text {
+    margin: 0 20rpx;
+    font-size: 24rpx;
+    color: #aaa;
+}
+.line {
+    flex: 1;
+    height: 1px;
+    background: #aaa;
+}
+.img-wrap {
+    padding-top: 85rpx;
+ }
+.img-wrap image {
+    display: block;
+    width: 180rpx;
+    height: 180rpx;
+}

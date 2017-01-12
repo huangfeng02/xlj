@@ -1,0 +1,65 @@
+<view class="user-index">
+    <view class="header">
+        <image class="head-bg-img" src="../../images/user-bg.jpg" mode="aspectFill"></image>
+        <view class="user-msg">
+            <image src="../../images/default_head_icon@3x.png"></image>
+            <navigator hover-class="none" url="/pages/user/login/index">立即登录</navigator>
+        </view>
+        <view class="flex flex-align-center flex-justify-around user-data">
+            <view>
+                <text class="num">0</text>
+                <text class="behavior">组织</text>
+            </view>
+            <view>
+                <text class="num">0</text>
+                <text class="behavior">参加</text>
+            </view>
+            <view>
+                <text class="num">0</text>
+                <text class="behavior">关注</text>
+            </view>
+            <view>
+                <text class="num">0</text>
+                <text class="behavior">粉丝</text>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view class="list-one">
+            <view class="flex flex-align-center flex-justify-between list">
+                <view class="flex flex-align-center l-wrap">
+                    <image src="../../images/mine_cost_icon@3x.png"></image>
+                    <text>路费</text>
+                </view>
+                <text>¥0</text>
+            </view>
+        </view>
+        <view class="list list-a">
+            <navigator hover-class="none" url="/pages/user/login/index" class="flex flex-align-center flex-justify-between ">
+                <view class="flex flex-align-center l-wrap">
+                    <image src="../../images/mine_order_icon@3x.png"></image>
+                    <text>订单</text>
+                </view>
+                <image src="../../images/arrow_right_black@3x.png"></image>
+            </navigator>
+        </view>
+        <view class="list list-a">
+            <navigator hover-class="none" url="/pages/user/login/index" class="flex flex-align-center flex-justify-between ">
+                <view class="flex flex-align-center l-wrap">
+                    <image src="../../images/mine_collect_icon@3x.png"></image>
+                    <text>收藏</text>
+                </view>
+                <image src="../../images/arrow_right_black@3x.png"></image>
+            </navigator>
+        </view>
+        <view class="list list-a">
+            <navigator hover-class="none" url="/pages/user/login/index" class="flex flex-align-center flex-justify-between ">
+                <view class="flex flex-align-center l-wrap">
+                    <image src="../../images/mine_set_icon@3x.png"></image>
+                    <text>设置</text>
+                </view>
+                <image src="../../images/arrow_right_black@3x.png"></image>
+            </navigator>
+        </view>
+    </view>
+</view>

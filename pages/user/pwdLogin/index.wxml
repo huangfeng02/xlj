@@ -1,0 +1,11 @@
+<view class="login-wrap">
+    <form>
+        <view class="flex flex-align-center input-wrap">
+            <input placeholder="输入手机号码" />
+        </view>
+        <view class="flex flex-align-center input-wrap">
+            <input placeholder="输入密码" />
+        </view>
+        <button class="login">登录</button>
+    </form>
+</view>

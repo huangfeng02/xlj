@@ -1,0 +1,30 @@
+page {
+    background: #f0f1f1;
+}
+.login-wrap {
+    padding-top: 50rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    padding-bottom: 100rpx;
+}
+.input-wrap {
+    margin-bottom: 20rpx;
+    height: 90rpx;
+    background: #fff;
+    border: 1rpx solid #d2d2d7;
+    border-radius: 15rpx;
+}
+.input-wrap input {
+    height: 60rpx;
+    padding-left: 10rpx;
+    font-size: 28rpx;
+    flex: 1;
+}
+.login {
+    margin-top: 80rpx;
+    margin-bottom: 60rpx;
+    height: 90rpx;
+    background: #f3e7c1;
+    color: #5d5028;
+    border: none;
+}
