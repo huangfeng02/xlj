@@ -1,0 +1,60 @@
+<view class="location">
+      <text class="selected">深圳市</text>
+</view>
+<view class="banner">
+      <swiper autoplay="true" interval="2000">
+          <swiper-item>
+               <image src="../../images/banner.png" class="slide-image" width="100%" height="290"/>
+         </swiper-item>
+         <swiper-item>
+               <image src="../../images/banner.png" class="slide-image" width="100%" height="290"/>
+         </swiper-item>
+      </swiper>
+      <view class="title">
+           <text class="ellipsis">独家指南 如何睡到广东最赞的民宿</text>
+      </view>
+</view>
+<view class="categories clearfix">
+      <navigator url="#" class="fl"><text>民宿</text><view class="cate-mask"></view></navigator>
+      <navigator url="#" class="fl"><text>野奢</text><view class="cate-mask"></view></navigator>
+      <navigator url="#" class="fl"><text>亲子</text><view class="cate-mask"></view></navigator>
+      <navigator url="#" class="fl"><text>边境</text><view class="cate-mask"></view></navigator>
+</view>
+<view class="list">
+      <view class="item">
+           <image class="pic" src="../../images/banner.png" mode="aspectFill" />
+           <view class="info">
+                <text class="title">野温泉探秘之韶关</text>
+                <view class="specific">
+                      <text class="setout">01月月24日出发 2天</text>
+                      <text class="distance">380KM</text>    
+                </view>
+                <view class="clearfix">
+                      <view class="guide fl clearfix">
+                           <view class="avatar fl" ><image  src="../../images/avatar.jpg" mode="aspectFill" /></view>
+                           <text class="fl">小路</text>
+                      </view>
+                      <view class="fr price">¥ <text>599</text></view>
+                </view>
+           </view>
+           <view class="line"></view>
+      </view>
+      <view class="item">
+           <image class="pic" src="../../images/banner.png" mode="aspectFill" />
+           <view class="info">
+                <text class="title">野温泉探秘之韶关</text>
+                <view class="specific">
+                      <text class="setout">01月月24日出发 2天</text>
+                      <text class="distance">380KM</text>    
+                </view>
+                <view class="clearfix">
+                      <view class="guide fl clearfix">
+                           <view class="avatar fl" ><image  src="../../images/avatar.jpg" mode="aspectFill" /></view>
+                           <text class="fl">小路</text>
+                      </view>
+                      <view class="fr price">¥ <text>599</text></view>
+                </view>
+           </view>
+           <view class="line"></view>
+      </view>
+</view>

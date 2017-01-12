@@ -1,0 +1,36 @@
+<view class="list">
+      <view class="item">
+            <view class="top clearfix">
+                 <image src="../../images/avatar.jpg" class="fl portrait"></image>
+                 <view class="info fl">
+                       <view class="name">小路<text>3个座位</text></view>
+                       <view class="msg">来吧</view>
+                       <view class="clearfix location">
+                             <image src="../../images/location.png" class="fl icon"></image>
+                             <text class="fl">杨美地铁站</text>
+                         </view>
+                 </view>
+            </view>
+            <view class="action clearfix">
+                  <navigator url="#" class="fl repost">转发</navigator>
+                  <navigator url="#" class="fl">与他拼车</navigator>
+            </view>
+      </view>
+      <view class="item">
+            <view class="top clearfix">
+                 <image src="../../images/avatar.jpg" class="fl portrait"></image>
+                 <view class="info fl">
+                       <view class="name">小路<text>3个座位</text></view>
+                       <view class="msg">来吧</view>
+                       <view class="clearfix location">
+                             <image src="../../images/location.png" class="fl icon"></image>
+                             <text class="fl">杨美地铁站</text>
+                         </view>
+                 </view>
+            </view>
+            <view class="action clearfix">
+                  <navigator url="#" class="fl repost">转发</navigator>
+                  <navigator url="#" class="fl">与他拼车</navigator>
+            </view>
+      </view>
+</view>

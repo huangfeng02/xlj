@@ -1,0 +1,60 @@
+/* pages/invitation/invitation.wxss */
+page{
+    background: #eee;
+    font-size: 32rpx;
+    color:#8d8777;
+}
+.list{
+    
+}
+.item{
+    background: #fff;
+    /*margin-bottom: 48rpx;*/
+    margin-bottom: 10rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+.top{
+    padding: 30rpx;
+}
+.info{
+    padding: 0 18rpx 0 24rpx;
+}
+.portrait{
+    width:88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+.icon{
+    width: 22rpx;
+    height: 30rpx;
+    margin-right: 6rpx;
+}
+.name{
+    font-size: 36rpx;
+    color:#333;
+}
+.name text{
+    display: inline-block;
+    padding-left: 8rpx;
+}
+.msg{
+    font-size: 30rpx;
+    margin: 6rpx 0;
+}
+.location{
+    margin: 6rpx 0;
+}
+.action{
+    border-top: 1rpx solid #ddd;
+}
+.action navigator{
+    width: 50%;
+    box-sizing: border-box;
+    height: 95rpx;
+    line-height: 95rpx;
+    color: #8d8777;
+    text-align: center;
+}
+.action .repost{
+    border-right: 1rpx solid #ddd;
+}

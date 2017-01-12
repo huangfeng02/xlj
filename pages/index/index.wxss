@@ -1,0 +1,121 @@
+page{
+    font-size: 32rpx;
+}
+.location{
+    text-align: center;
+    border-bottom: 2rpx solid #dcdcdc;
+}
+.selected{
+    padding-right: 38rpx;
+    background: url("../../images/arrow_down.png") no-repeat right 18rpx;
+    background-size: 24rpx 14rpx;
+    line-height: 96rpx;
+}
+.banner{
+    height: 290rpx;
+    overflow: hidden;
+    position: relative;
+}
+.banner .title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    background: rgba(0,0,0,0.4);
+    color:#fff;
+    padding: 0 30rpx;
+}
+.categories{
+    background: #eee;
+    padding: 35rpx 0;
+}
+.categories navigator{
+    margin-left: 32rpx;
+    height: 152rpx;
+    width: 152rpx;
+    line-height: 152rpx;
+    background:url("../../images/banner.png") no-repeat 0 0;
+    background-size: cover;
+    border-radius: 10rpx;
+    color:#fff;
+    position: relative;
+}
+.categories navigator text{
+    position: absolute;
+    text-align: center;
+    width: 152rpx;
+    z-index: 10;
+}
+.cate-mask{
+    background: rgba(0,0,0,0.2);
+    height: 152rpx;
+    width: 152rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.item{
+    color:#888271;
+    font-size: 28rpx;
+}
+.item .title{
+    font-size: 34rpx;
+    color:#333;
+    line-height: 64rpx;
+}
+.item .info{
+    padding: 0 38rpx 32rpx 23rpx;
+    border-bottom: 1rpx solid #dcdcdc;
+}
+.pic{
+    max-height: 466rpx;
+    width: 100%;
+    overflow: hidden;
+}
+.specific{
+    line-height: 50rpx;
+    height: 50rpx;
+}
+.setout{
+    background: url("../../images/time_grey.png") no-repeat 0 2rpx;
+    background-size: 22rpx 22rpx;
+    padding-left: 26rpx;
+    margin-right: 34rpx;
+}
+.distance{
+    background: url("../../images/location_grey.png") no-repeat 0 2rpx;
+    background-size: 16rpx 22rpx;
+    padding-left: 22rpx;
+}
+.avatar{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 50%;
+    border: 1rpx solid #cecece;
+    margin: 14rpx 16rpx 14rpx 0;
+}
+.avatar image{
+    width: 66rpx;
+    height: 66rpx;
+    border-radius: 50%;
+}
+.guide text{
+    line-height: 100rpx;
+}
+.info .price{
+    color:#ffd554;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+}
+.info .price text{
+    font-size: 42rpx;
+}
+.line{
+    height: 24rpx;
+    background: #eee;
+}
