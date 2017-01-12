@@ -1,0 +1,86 @@
+.user-index {
+    padding-bottom: 100rpx;
+}
+.header {
+    position: relative;
+}
+.head-bg-img {
+    display: block;
+    width: 100%;
+    height: 446rpx;
+}
+.user-msg {
+    position: absolute;
+    top:70rpx;
+    left: 50%;
+    margin-left: -74rpx;
+}
+.user-msg image {
+    display: block;
+    margin-bottom: 20rpx;
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    border:2px solid #fff;
+}
+.user-msg navigator {
+    display: block;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+}
+.user-data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15rpx 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.user-data text {
+    display: block;
+    text-align: center;
+}
+.num {
+    font-size: 36rpx;
+    color: #f8d74e;
+}
+.behavior {
+    font-size: 22rpx;
+    color: #fff;
+}
+.list {
+    padding: 25rpx 36rpx;
+    box-sizing: border-box;
+}
+.list-a {
+    margin-left:36rpx; 
+    padding-top:25rpx;
+    padding-left: 0;
+    padding-right: 36rpx;
+    padding-bottom: 25rpx;
+    border-bottom: 1rpx solid #ececec;
+}
+.list-one {
+    padding: 35rpx 0;
+    background: #eee;
+}
+.list-one > view {
+    width: 100%;
+    background: #fff;
+}
+navigator > image {
+    display: block;
+    width: 40rpx;
+    height: 40rpx;
+}
+.l-wrap image{
+    display: block;
+    margin-right: 36rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+.list text {
+    font-size: 36rpx;
+    color: #726a4e;
+}
