@@ -14,3 +14,48 @@
 .flex-justify-center {
   justify-content: center;
 }
+page{
+  font-family: STHeitiSC-Light,Heiti SC Meidium,Microsoft YaHei UI;height: 100%;
+}
+.clearfix::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; 
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0
+}
+.ellipsis{
+    display:block;
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
+.line-clamp{
+    display:box;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow : hidden;
+     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+scroll-view{
+    box-sizing: border-box;
+}
+button::after {
+    border:0;
+}

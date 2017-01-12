@@ -3,12 +3,15 @@
     "pages/user/index",
     "pages/user/login/index",
     "pages/user/pwdLogin/index",
-    "pages/user/register/index"
-  ],
+    "pages/user/register/index",
+    "pages/index/index",
+    "pages/activity/activity",
+    "pages/activity/invitation/invitation"
+      ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "寻路记",
     "navigationBarTextStyle":"black"
   },
    "tabBar": {
