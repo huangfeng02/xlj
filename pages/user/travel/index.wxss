@@ -1,0 +1,52 @@
+page {
+    background: #fff;
+}
+
+.travel {
+}
+.travel .item{
+    height: 188rpx;border-bottom: 1px solid #f3f3f3;padding: 0 35rpx;
+}
+
+.travel .item .num{
+   line-height: 188rpx;float: right;
+}
+.travel .item .title{
+    margin-top: 45rpx;
+   float: left;
+}
+.travel .item text{
+    display: block;
+}
+.travel .item .date{
+  color: #b0aca0;font-size: 28rpx;margin-top: 10rpx;
+}
+
+.travel .top {
+    height: 400rpx;
+    width: 100%;
+    background: #ffd34d;
+    text-align: center;
+}
+
+.travel .top .jifen {
+    height: 280rpx;
+    width: 280rpx;
+    line-height:280rpx;
+    background: #ef7c5e;
+    border: 2px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 60rpx;
+    font-size: 80rpx;
+    color:#fff;
+}
+
+.nav {
+    height: 70rpx;
+    line-height: 70rpx;
+    display: block;
+    background: #eee;
+    padding-left: 35rpx;
+    color: #b8b5ac;
+}

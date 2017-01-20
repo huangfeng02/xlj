@@ -1,0 +1,10 @@
+.cityList{}
+
+.cityList .item {
+    display: block;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    font-size: 40rpx;
+    color: #333;
+}

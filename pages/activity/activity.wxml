@@ -1,26 +1,28 @@
 <scroll-view>
-     <view class="top">
-         <image src="../../images/banner.jpg" mode="aspectFill"></image>
+    <import src="../../utils/wxParse/wxParse.wxml"/>
+
+    <view class="top">
+         <image src="{{imgUrl}}" mode="aspectFill"></image>
      </view>
      <view class="info">
-          <text class="stroke">2天  200公里</text>
-          <text class="title">每个季节都是去海边的最佳季节，因为美好不会枯竭</text>
+          <text class="stroke">{{days}}天  {{extent}}公里</text>
+          <text class="title">{{title}}</text>
           <view class="price clearfix">
                <view class="fl">
-                   <text class="em">￥99</text>
+                   <text class="em">￥{{priceAdult}}</text>
                    <text class="age">成人</text>
-                   <text class="em">￥0</text>
+                   <text class="em">￥{{priceChild}}</text>
                    <text class="age">儿童</text>
                </view>
                <view class="fr">费用说明</view>
           </view>
           <view class="parking">
-               <text>参与车辆1台,剩余3个座位</text>
-               <text class="fr">拼车￥50/人</text>
+               <text>参与车辆{{carNum}}台,剩余{{seat}}个座位</text>
+               <text class="fr">拼车￥{{priceCar}}/人</text>
           </view>
           <view class="date">
-               <image class="icon" src="../../images/time.png" mode="aspectFill"></image>
-               <text class="deadTime">2017/01/13 报名截止</text>
+               <image class="icon" src="../../images/time.png"></image>
+               <text class="deadTime">{{deadTime}} 报名截止</text>
           </view>
      </view>
      <view class="line"></view>
@@ -42,7 +44,7 @@
            <text>参加须知</text>
      </view>
 
-     <view class="characteristic">在港口镇边上的私人海滩，我们寻得了一片更加适合留作存档的画面，并享用最地道的家庭餐馆，当日捕获的新鲜海鲜，入住最有味道的双月湾本地治里酒店，在入夜后静享一杯国内顶级的精酿啤酒。</view>
+     <view class="characteristic">{{content}}</view>
      <view class="line"></view>
      <view class="hd">
            <view class="experience">
@@ -51,23 +53,9 @@
                       <text>沿途体验</text>
                  </view>
                  <view class="content">
-                      <image src="../../images/content1.gif" mode="aspectFit"></image>
-                      <image src="../../images/content2.gif" mode="aspectFit"></image>
-                      <image src="../../images/content3.jpg" mode="aspectFit"></image>
-                      <image src="../../images/content4.jpg" mode="aspectFit"></image>
-                      <text>在商业化并不严重的双月湾海域，我们寻得了一片更加适合留作存档的画面。这个隐藏在废弃的海关码头附近的海滩，有着特别的意境，和器材无关，我们在这片海滩上用手机也能拍出无数大片。</text>
-                      <image src="../../images/content5.gif" mode="aspectFit"></image>
-                      <text>不想做全国最好精酿啤酒的歌手投资人不是一个好客栈老板——作为双月湾最好的客栈老板，堂哥开了一家这样的海边客栈：这里没有耀眼的灯光，没有城市的喧嚣，在忙碌的生命里偶遇这样一个地方，能够让自己稍作停留。</text>
-                      <image src="../../images/content6.jpg" mode="aspectFit"></image>
-                      <image src="../../images/content7.gif" mode="aspectFit"></image>
-                      <image src="../../images/content8.gif" mode="aspectFit"></image>
-                      <text>三杯两盏酒，一席海风悠。本从白天到夜晚，这里可以供应你沉思、聊天、工作、鬼混，尽情的摄取食物、咖啡因、音乐与五花八门的酒精。这里可以很安静，这里也可以很热闹。吃的东西有质感，喝的东西有分量。</text>
-                      <image src="../../images/content9.jpg" mode="aspectFit"></image>
-                      <image src="../../images/content10.gif" mode="aspectFit"></image>
-                      <text>再挑剔的言语也无法凝炼出美食的真谛，唯真实自有万钧之力。港口镇的戏台，门前一口古井，这是一家本地家庭经营的小餐馆。千转百回，才寻的此地。虽然没有显眼的门牌和浮华的店面装修，深居幽巷却不减专程到访的络绎人群。伴随着所有人的目光，一道道菜从门口传来，这里的每一道菜肴都包裹着港口人对新鲜食材敬畏。</text>
-                 <image src="../../images/content11.gif" mode="aspectFit"></image>
-                 <image src="../../images/content12.gif" mode="aspectFit"></image>
-                 <text>渔村的早市不仅仅是海鲜市场，这里拥有太多的逛头。出海归来满载生鲜的渔船、拾网编织的老翁老叟、错落停滞在渡口旁搁浅的废舟、鱼贩们堆摆整齐的干货海味。繁华市井的中随意一笔都是恰到好处，将清晨的小镇上的热闹与喧嚣调和的不多不少。</text>
+                     <view class="wxParse">
+                         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                     </view>
                  </view>
            </view>
      </view>
@@ -78,61 +66,12 @@
               <text>行程安排</text>
           </view>
           <view class="content">
-               <view class="item">
-                    <view class="day">第一天</view>
+               <view class="item" wx:for="{{contentList}}">
+                    <view class="day">{{item.title}}</view>
                     <view class="detail">
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                    </view>
-               </view>
-               <view class="item">
-                    <view class="day">第二天</view>
-                    <view class="detail">
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
-                         </view>
-                         <view class="listed">
-                             <text class="time">09:00</text>
-                             <text class="event">杨美地铁站集合出发。</text>          
+                         <view class="listed" wx:for="{{item.itemList}}">
+                             <text class="time">{{item.itemTittle}}</text>
+                             <text class="event">{{item.itemContent}}</text>
                          </view>
                     </view>
                </view>
@@ -145,82 +84,43 @@
               <text>参加须知</text>
           </view>
           <view class="content">
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
-              <view class="item">
-                   <text class="num">1</text>
-                   <text>此路线风景如画，目的地及游玩景点各异。</text>
-              </view>
+               {{noticeJson}}
           </view>
      </view>
      <view class="line"></view>
      <view class="captain clearfix">
-           <view class="fl">
-                <text class="name">小路</text>
-                <view class="clearfix breif">
-                      <text class="fl left">简介</text>
-                      <text class="fl">寻路记官方吉祥物</text>
-                </view>
-                <text class="arrange">组织过112次活动</text>
-           </view>
-           <image  class="fr portrait" src="../../images/avatar.jpg" mode="aspectFill"></image>
+           <image  class="fl portrait" src="{{avatarUrl}}"></image>
+         <view class="fl captain_name">
+             <text class="name">{{name}}</text>
+             <text class="arrange">组织过{{activityCount}}次活动</text>
+         </view>
+         <text class="captain_desc">{{userContent}}</text>
      </view>
      <view class="line"></view>
-     <view class="invite">
-          <navigator url="#">1位车主邀请你参加拼车<image src="../../images/arrow.png" class="fr" mode="aspectFit" /></navigator>
+     <view class="invite" wx:if="{{condition}}">
+          <navigator url="#">{{owners}}位车主邀请你参加拼车<image src="../../images/arrow.png" class="fr" mode="aspectFit" /></navigator>
           <view>
-             <navigator url="url" class="inviter clearfix">
-                   <image src="../../images/avatar.jpg" class="fl avatar"></image>
+             <navigator url="url" class="inviter clearfix" wx:for="{{ownersList}}">
+                   <image src="{{item.avatarUrl}}" class="fl avatar"></image>
                    <view class="fl txt">
-                         <text class="name">小路</text>
-                         <text>来吧</text>
+                         <text class="name">{{item.name}}</text>
+                         <text>{{item.content}}</text>
                          <view class="clearfix">
                              <image src="../../images/location.png" class="icon fl"></image>
-                             <text class="fl">杨美地铁站</text>
-                         </view>
-                   </view>
-             </navigator> 
-             <navigator url="url" class="inviter clearfix">
-                   <image src="../../images/avatar.jpg" class="fl avatar"></image>
-                   <view class="fl txt">
-                         <text class="name">小路</text>
-                         <text>来吧</text>
-                         <view class="clearfix">
-                             <image src="../../images/location.png" class="icon fl"></image>
-                             <text class="fl">杨美地铁站</text>
+                             <text class="fl">{{item.address}}</text>
                          </view>
                    </view>
              </navigator> 
           </view>
      </view>
      <navigator url="#" class="contact clearfix">
-           <text class="fr">咨询</text>
+           <text class="fr" data-phone="{{phone}}" bindtap="callPhone">咨询</text>
            <image class="fr" src="../../images/contact.png" />
      </navigator>
+
+    <view class="bottom clearfix">
+        <navigator url="./kaiche/index?activityId={{activityId}}&priceAdult={{priceAdult}}&priceChild={{priceChild}}&priceExtro={{priceExtro}}&score={{score}}&seat={{seat}}" class="fl drive">开车参加</navigator>
+        <navigator url="./pinche/index?activityId={{activityId}}&priceAdult={{priceAdult}}&priceChild={{priceChild}}&priceExtro={{priceExtro}}&score={{score}}&seat={{seat}}" class="fl" wx:if="{{seat>0}}">拼车参加</navigator>
+        <view bindtap="pinChe" class="fl" wx:if="{{seat==0}}">拼车参加</view>
+    </view>
 </scroll-view>
-<view class="bottom clearfix">
-     <navigator url="#" class="fl drive">开车参加</navigator>
-     <navigator url="#" class="fl">拼车参加</navigator>
-</view>

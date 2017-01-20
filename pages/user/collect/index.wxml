@@ -1,0 +1,15 @@
+<view class="orderList">
+ <view class="tab">
+     <text class="current">路线</text>
+     <text>活动</text>
+ </view>
+    <scroll-view style="height:100%;" class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle"
+                 bindscrolltolower="getPage">
+        <navigator url="redirect?title=redirect" hover-class="other-navigator-hover" wx:for="{{items}}">
+            <image src="{{item.imgUrl}}"></image>
+            <view>
+                <text>{{item.title}}"</text>
+            </view>
+        </navigator>
+    </scroll-view>
+</view>

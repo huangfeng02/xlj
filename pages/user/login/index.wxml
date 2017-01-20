@@ -1,12 +1,17 @@
 <view class="login-wrap">
+    <form bindsubmit="formSubmit">
+
     <view class="flex flex-align-center input-wrap">
-        <input placeholder="输入手机号码" />
+        <input name="phone" bindinput="bindPhone" placeholder="输入手机号码" />
     </view>
     <view class="flex flex-align-center input-wrap">
-        <input placeholder="输入验证码" />
-        <button>获取验证码</button>
+        <input name="verCode" placeholder="输入验证码" />
+        <button wx:if="{{!reset}}" bindtap="_sendCode">获取验证码</button>
+        <button wx:if="{{reset}}">{{second}}s</button>
     </view>
-    <button class="login">登录</button>
+        <button class="login" formType="submit">{{subTxt}}</button>
+    </form>
+
     <view class="flex flex-align-center flex-justify-between url-wrap">
         <navigator class="pwd-login" url="/pages/user/pwdLogin/index">使用密码登录</navigator>
         <navigator class="register" url="/pages/user/register/index">注册</navigator>
@@ -18,7 +23,5 @@
     </view>
     <view class="flex flex-align-center flex-justify-around img-wrap">
         <image src="../../../images/wx_login@3x.png"></image>
-        <image src="../../../images/qq_login@3x.png"></image>
-        <image src="../../../images/wb_login@3x.png"></image>
     </view>
 </view>

@@ -1,0 +1,57 @@
+<view class="main">
+    <view class="view-item">
+        <view class="item line">
+            <text class="tx1">成人</text>
+            <text class="tx2">￥{{priceAdult}}/人</text>
+            <view class="txView">
+                <view class="cut" bindtap="cutAdult"></view>
+                <text class="num">{{peopleAdult}}</text>
+                <view class="add" bindtap="addAdult"></view>
+            </view>
+        </view>
+        <view class="item">
+            <text class="tx1">小孩</text>
+            <text class="tx2">￥{{priceChild}}/人</text>
+            <view class="txView">
+                <view class="cut" bindtap="cutChild"></view>
+                <text class="num">{{peopleChild}}</text>
+                <view class="add" bindtap="addChild"></view>
+            </view>
+        </view>
+
+        <view class="pinFang" wx:if="{{showPinFang}}">
+            <text class="block">{{pintxt}}</text>
+            <text class="block color-red">单房差￥{{agio}}</text>
+            <view class="btn-view">
+                <text class="tapBtn" bindtap="pinNo">否</text>
+                <text class="tapBtn tapBtn-yes" bindtap="pinYes">是</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="view-item">
+        <view class="item line">
+            <text class="tx1">路费抵扣：</text>
+            <text class="{{discountClass}}" bindtap="discount"></text>
+            <text class="tx3">-￥{{deductible}}</text>
+        </view>
+        <view class="item">
+            <text class="tx1">费用合计：</text>
+            <text class="tx3 color-red">￥{{totalPrice}}</text>
+        </view>
+    </view>
+
+    <view class="clause">
+        <text class="icon-clause"></text>
+        我已阅读并接受
+        <navigator url="navigate?title=navigate" hover-class="navigator-hover">《自驾游活动服务条款》</navigator>
+    </view>
+
+    <view class="ft-view">
+        <view class="txt">
+            <text class="txt1 color-red">合计￥{{totalPrice}}</text>
+            <text class="txt2 color-gray" wx:if="{{showDeductible}}">(为你节省￥{{deductible}})</text>
+        </view>
+        <text class="submit" bindtap="submit">提交订单</text>
+    </view>
+</view>

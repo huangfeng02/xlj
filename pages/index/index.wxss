@@ -7,7 +7,7 @@ page{
 }
 .selected{
     padding-right: 38rpx;
-    background: url("../../images/arrow_down.png") no-repeat right 18rpx;
+    background: url("http://www.xunluji.com/static/images/images/arrow_down.png") no-repeat right 18rpx;
     background-size: 24rpx 14rpx;
     line-height: 96rpx;
 }
@@ -16,9 +16,16 @@ page{
     overflow: hidden;
     position: relative;
 }
+.banner image{
+    width: 100%;
+    height: 290rpx;
+}
+.banner swiper{
+    height: 290rpx;
+}
 .banner .title{
     position: absolute;
-    bottom: 0;
+    bottom: 0rpx;
     left: 0;
     display: block;
     width: 100%;
@@ -37,7 +44,9 @@ page{
     height: 152rpx;
     width: 152rpx;
     line-height: 152rpx;
-    background:url("../../images/banner.png") no-repeat 0 0;
+    /*
+    background:url("../../images/banner.jpg") no-repeat 0 0;
+    */
     background-size: cover;
     border-radius: 10rpx;
     color:#fff;
@@ -50,13 +59,22 @@ page{
     z-index: 10;
 }
 .cate-mask{
-    background: rgba(0,0,0,0.2);
     height: 152rpx;
     width: 152rpx;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 9;
+}
+
+.cate-mask image{
+    height: 152rpx;
+    width: 152rpx;
+    opacity: 0.8;
+    -webkit-border-radius: 10rpx;
+    -moz-border-radius: 10rpx;
+    border-radius: 10rpx;
+
 }
 .item{
     color:#888271;
@@ -81,13 +99,13 @@ page{
     height: 50rpx;
 }
 .setout{
-    background: url("../../images/time_grey.png") no-repeat 0 2rpx;
+    background: url("http://www.xunluji.com/static/images/images/time_grey.png") no-repeat 0 2rpx;
     background-size: 22rpx 22rpx;
     padding-left: 26rpx;
     margin-right: 34rpx;
 }
 .distance{
-    background: url("../../images/location_grey.png") no-repeat 0 2rpx;
+    background: url("http://www.xunluji.com/static/images/images/location_grey.png") no-repeat 0 2rpx;
     background-size: 16rpx 22rpx;
     padding-left: 22rpx;
 }

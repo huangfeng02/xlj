@@ -8,6 +8,7 @@ scroll-view{
 .top image{
   border-bottom: 2rpx solid #f8b636;
   height: 505rpx;
+    width: 100%;
 }
 .info{
   padding: 14rpx;
@@ -174,7 +175,7 @@ scroll-view{
   margin-right: 22rpx;
 }
 .arrange{
-  margin: 20rpx 0 12rpx;
+  margin: 20rpx 0 12rpx;display: block;
 }
 .portrait{
   width: 140rpx;
@@ -248,7 +249,7 @@ scroll-view{
     width: 100%;
     box-sizing: border-box;
 }
-.bottom navigator{
+.bottom navigator, .bottom view{
    box-sizing: border-box;
    width: 50%;
    text-align: center;
@@ -259,3 +260,7 @@ scroll-view{
 .bottom .drive{
    border-right: 1rpx solid #333;
 }
+
+.captain_desc{clear: both;}
+.captain_name{margin-left: 15rpx;margin-top:8rpx;}
+.captain_desc{color: #f27b60;padding-top: 8rpx;}

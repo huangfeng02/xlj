@@ -1,0 +1,16 @@
+<view class="orderList">
+ <view class="tab">
+     <text class="current">已支付</text>
+     <text>待付款</text>
+ </view>
+
+    <scroll-view style="height:100%;" class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle"
+                 bindscrolltolower="getPage">
+        <navigator url="redirect?title=redirect" hover-class="other-navigator-hover" wx:for="{{items}}">
+            <image src="{{item.imgUrl}}"></image>
+            <view>
+                <text>{{item.title}}"</text>
+            </view>
+        </navigator>
+    </scroll-view>
+</view>

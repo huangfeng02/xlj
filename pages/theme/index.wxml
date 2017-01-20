@@ -1,0 +1,34 @@
+<scroll-view style="height:100%;" class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle"
+             bindscrolltolower="getPage">
+    <image class="themeCover" src="{{imgUrl}}"></image>
+
+    <view class="themeList">
+        <navigator url="navigate?title=navigate" hover-class="navigator-hover" wx:for="{{items}}">
+            <view class="themeItem">
+                <image class="imgCover" src="{{item.imgUrl}}"></image>
+                <view class="main">
+                    <text>{{item.title}}</text>
+                    <view class="date">
+                        <image class="icon" src="../../images/time_grey.png" mode="aspectFit"></image>
+                        <text class="deadTime days">11月出发  {{item.days}}</text>
+                        <image class="icon" src="../../images/location_grey.png" mode="aspectFit"></image>
+                        <text class="deadTime">120KM</text>
+                    </view>
+                    <view class="captain clearfix">
+                        <image class="fl portrait" src="{{item.avatarUrl}}" mode="aspectFit"></image>
+                        <view class="fl captain_name">
+                            <text class="name">{{item.name}}</text>
+                        </view>
+                        <text class="captain_price fr">￥{{item.priceAdult}}</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+       <!-- <block wx:if="{{isLoading}}">
+            <view class="loading-tip">拼命加载中…</view>
+        </block>
+        <block wx:if="{{!hasMore}}">
+            <view class="loading-tip">没有更多了</view>
+        </block>-->
+    </view>
+</scroll-view>

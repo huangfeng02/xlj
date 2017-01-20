@@ -1,0 +1,65 @@
+page{background: #eee}
+.main{padding-bottom: 120rpx}
+.view-item{background: #fff;padding:0 25rpx;margin-bottom: 40rpx}
+.view-item .line{border-bottom: 1px solid #f3f3f3}
+.item{height: 100rpx;line-height: 100rpx}
+.item .tx1{float: left}
+.item .tx2{float: left;margin-left: 125rpx;}
+.item .tx3{float: right}
+.item .txView{float: right;width: 220rpx;height: 65rpx;border: 1px solid #ccc;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 18rpx;
+}
+.item .cut{height: 60rpx; width: 60rpx;float: left; background: url("http://www.xunluji.com/static/images/images/order_reduce_icon@3x.png") no-repeat;
+ background-size: contain;margin-left: 20rpx;margin-top: 2rpx;
+}
+.item .add{height: 60rpx; width: 60rpx;float: right; background: url("http://www.xunluji.com/static/images/images/order_add_icon@3x.png") no-repeat;
+ background-size: contain;margin-right: 20rpx;margin-top: 2rpx;
+}
+.item .num{height: 65rpx; width: 60rpx;line-height:65rpx;text-align: center; position: absolute;left:80rpx;top:0}
+
+.pinFang{border-top: 1px solid #f3f3f3;padding: 25rpx 0}
+.pinFang .block{display: block;margin-bottom: 15rpx}
+.color-red{color: #f3a08a}
+.color-gray{color: #a7a296}
+.btn-view{text-align: center;}
+.btn-view .tapBtn {
+    width: 115rpx;
+    height: 85rpx;
+    line-height:85rpx;
+    text-align: center;
+    border: 1px solid #f3f3f3;
+    background: #fff;
+    display: inline-block;
+    margin-left: 40rpx;
+    -webkit-border-radius: 40rpx;
+    -moz-border-radius: 40rpx;
+    border-radius: 40rpx;
+}
+.btn-view .tapBtn-yes{border: 1px solid #fbd152;color: #fff;background: #fbd152}
+
+.icon-agree {
+    float: right;
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    background: #4ec9f1;
+    margin-top: 20rpx;
+    margin-left: 10rpx;
+}
+
+.clause{text-align: center;font-size: 28rpx}
+.clause navigator{display: inline-block;}
+.clause text{text-align: center}
+.clause .icon-clause{width: 40rpx;height:40rpx;background: #4ec9f1;display: inline-block }
+
+
+.ft-view{height: 110rpx;width: 100%; line-height:110rpx;background: #fff;position: fixed;bottom: 0;left: 0;}
+.ft-view .txt{float: left;padding-left: 10rpx;}
+.ft-view .txt1{}
+.ft-view .txt2{font-size: 25rpx}
+.ft-view .submit{width: 180rpx;color: #000;text-align: center;float: right;background:#fbd152 }

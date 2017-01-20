@@ -1,0 +1,7 @@
+page {
+    background: #eee;
+}
+
+.tab{height: 135rpx;background: #fff;text-align: center}
+.tab text{display: inline-block;height: 130rpx;line-height: 130rpx;border-bottom: 2px solid #fff;margin-left: 30rpx}
+.tab .current{border-bottom: 2px solid #ffd34d}

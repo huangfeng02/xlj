@@ -1,0 +1,12 @@
+<scroll-view style="height:100%;" class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle"
+             bindscrolltolower="getPage">
+    <view class="cityList">
+        <text class="item" wx:for="{{items}}" bindtap="toBack" data-city="{{item.name}}">{{item.name}}</text>
+        <block wx:if="{{isLoading}}">
+            <view class="loading-tip">拼命加载中…</view>
+        </block>
+        <block wx:if="{{!hasMore}}">
+            <view class="loading-tip">没有更多了</view>
+        </block>
+    </view>
+</scroll-view>

@@ -1,0 +1,17 @@
+<view class="travel">
+ <view class="top">
+     <text class="jifen">{{integral}}元</text>
+ </view>
+    <text class="nav">收支明细：</text>
+
+    <scroll-view style="height:100%;" class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle"
+                 bindscrolltolower="getPage">
+       <view class="item" wx:for="{{items}}">
+           <view class="title">
+               <text>{{item.content}}</text>
+               <text class="date">{{item.createTime}}</text>
+           </view>
+           <view class="num">{{item.integralStr}}</view>
+       </view>
+    </scroll-view>
+</view>

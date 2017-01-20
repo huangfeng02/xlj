@@ -1,0 +1,29 @@
+page {
+    background: #eee;
+}
+
+.user-set .login-set {
+    border-bottom: 1px solid #e7e7e8;
+    border-top: 1px solid #e7e7e8;
+    padding-left: 85rpx;
+    background: #fff;
+    margin-top: 40rpx;
+}
+
+.user-set navigator {
+    height: 100rpx;line-height:100rpx;
+}
+
+.user-set navigator:first-child{
+    border-bottom: 1px solid #e7e7e8;
+}
+
+.login-out{
+    height: 100rpx;line-height:100rpx;
+    border-bottom: 1px solid #e7e7e8;
+    border-top: 1px solid #e7e7e8;
+    color: #f4a48f;text-align: center;
+    background: #fff;
+    margin-top: 40rpx;
+
+}
