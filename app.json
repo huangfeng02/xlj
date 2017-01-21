@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/theme/activity/activity",
     "pages/theme/index",
     "pages/city/index",
     "pages/activity/pinche/index",
