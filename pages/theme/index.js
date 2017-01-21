@@ -77,7 +77,7 @@ Page({
             success: function(res) {
                 wx.hideToast()
                 var len= res.data.result.list.length,list=res.data.result.list,listTemp=[];
-                console.log(JSON.stringify(list))
+               // console.log(JSON.stringify(list))
                 _this.setData({
                     imgUrl:res.data.result.imgUrl
                 })

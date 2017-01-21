@@ -41,8 +41,16 @@ Page({
           },
           success: function(res) {
               wx.hideToast()
+              var arg2=[1,3,5,6]
               var data=res.data.result;
              // console.log(JSON.stringify(data))
+              arg2 =arg2.map(function(item,index){
+                 return ++item;
+              });
+              console.log(arg2)
+              //util.reverse(data.deadTime,0)
+
+
               _this.setData({
                   bannerList:data.bannerList,
                   themeList:data.themeList,
@@ -64,6 +72,7 @@ Page({
     // 页面渲染完成
   },
   onShow:function(){
+      app.loginWx()
       try {
           var value = wx.getStorageSync('city')
           if (value) {

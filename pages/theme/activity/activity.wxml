@@ -1,0 +1,94 @@
+<scroll-view>
+    <import src="../../../utils/wxParse/wxParse.wxml"/>
+
+    <view class="top">
+         <image src="{{imgUrl}}" mode="aspectFill"></image>
+     </view>
+     <view class="info">
+          <text class="stroke">{{days}}天  {{extent}}公里</text>
+          <text class="title">{{title}}</text>
+          <view class="price clearfix">
+               <view class="fl">
+                   <text class="em">￥{{priceAdult}}</text>
+                   <text class="age">成人</text>
+                   <text class="em">￥{{priceChild}}</text>
+                   <text class="age">儿童</text>
+               </view>
+               <view class="fr">费用说明</view>
+          </view>
+          <view class="parking">
+               <text>参与车辆{{carNum}}台,剩余{{seat}}个座位</text>
+               <text class="fr">拼车￥{{priceCar}}/人</text>
+          </view>
+          <view class="date">
+               <image class="icon" src="../../../images/time.png"></image>
+               <text class="deadTime">{{deadTime}} 报名截止</text>
+          </view>
+     </view>
+     <view class="line"></view>
+     <view class="tab">
+           <text class="current">沿途体验</text>
+           <text>行程安排</text>
+           <text>参加须知</text>
+     </view>
+
+     <view class="characteristic">{{content}}</view>
+     <view class="line"></view>
+     <view class="hd">
+           <view class="experience">
+                 <view class="nav-title">
+                      <image src="../../../images/balloon.png" mode="aspectFit"></image>
+                      <text>沿途体验</text>
+                 </view>
+                 <view class="content">
+                     <view class="wxParse">
+                         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                     </view>
+                 </view>
+           </view>
+     </view>
+     <view class="line"></view>
+     <view class="schedule">
+          <view class="nav-title">
+              <image src="../../../images/date.png" mode="aspectFit"></image>
+              <text>行程安排</text>
+          </view>
+          <view class="content">
+               <view class="item" wx:for="{{contentList}}">
+                    <view class="day">{{item.title}}</view>
+                    <view class="detail">
+                         <view class="listed" wx:for="{{item.itemList}}">
+                             <text class="time">{{item.itemTittle}}</text>
+                             <text class="event">{{item.itemContent}}</text>
+                         </view>
+                    </view>
+               </view>
+          </view>
+     </view>
+     <view class="line"></view>
+     <view class="notice">
+          <view class="nav-title">
+              <image src="../../../images/notice.png" mode="aspectFit"></image>
+              <text>参加须知</text>
+          </view>
+          <view class="content">
+               {{noticeJson}}
+          </view>
+     </view>
+     <view class="line"></view>
+     <view class="captain clearfix">
+           <image  class="fl portrait" src="{{avatarUrl}}"></image>
+         <view class="fl captain_name">
+             <text class="name">{{name}}</text>
+             <text class="arrange">组织过{{activityCount}}次活动</text>
+         </view>
+         <text class="captain_desc">{{userContent}}</text>
+     </view>
+     <view class="line"></view>
+
+     <navigator url="#" class="contact clearfix">
+           <text class="fr" data-phone="{{phone}}" bindtap="callPhone">咨询</text>
+           <image class="fr" src="../../../images/contact.png" />
+     </navigator>
+
+</scroll-view>

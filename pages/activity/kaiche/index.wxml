@@ -23,8 +23,8 @@
             <text class="block">{{pintxt}}</text>
             <text class="block color-red">单房差￥{{agio}}</text>
             <view class="btn-view">
-                <text class="tapBtn" bindtap="pinNo">否</text>
-                <text class="tapBtn tapBtn-yes" bindtap="pinYes">是</text>
+                <text class="tapBtn {{tabBtnNo}}" bindtap="pinNo">否</text>
+                <text class="tapBtn {{tabBtnYes}}" bindtap="pinYes">是</text>
             </view>
         </view>
     </view>

@@ -12,7 +12,7 @@
         <button class="login" formType="submit">{{subTxt}}</button>
     </form>
 
-    <view class="flex flex-align-center flex-justify-between url-wrap">
+   <!-- <view class="flex flex-align-center flex-justify-between url-wrap">
         <navigator class="pwd-login" url="/pages/user/pwdLogin/index">使用密码登录</navigator>
         <navigator class="register" url="/pages/user/register/index">注册</navigator>
     </view>
@@ -23,5 +23,5 @@
     </view>
     <view class="flex flex-align-center flex-justify-around img-wrap">
         <image src="../../../images/wx_login@3x.png"></image>
-    </view>
+    </view>-->
 </view>

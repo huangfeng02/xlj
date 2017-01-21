@@ -1,0 +1,266 @@
+page{
+  color:#888271;
+  font-size: 32rpx;
+}
+scroll-view{
+  padding-bottom: 20rpx;
+}
+.top image{
+  border-bottom: 2rpx solid #f8b636;
+  height: 505rpx;
+    width: 100%;
+}
+.info{
+  padding: 14rpx;
+}
+.stroke {
+    display: block;
+    font-size:28rpx;
+    color: #898989;
+}
+.info .title {
+    display: block;
+    font-size: 36rpx;
+    color: #333;
+    padding: 23rpx 0;
+}
+.price .fr{
+  color:#31b5e8;
+  font-size: 30rpx;
+}
+.info .price {
+    font-size: 28rpx;
+    color: #898989;
+}
+.price .em {
+    font-size: 38rpx;
+    color: #ef7c5e;
+    font-weight: bold;
+}
+.age{
+    padding-right: 23rpx;
+    padding-left: 23rpx;
+    display: inline-block;
+}
+.parking {
+    font-size: 30rpx;
+    color: #898989;
+    padding: 23rpx 0;
+}
+.info .date {
+    font-size: 33rpx;
+    color: #f8b636;
+}
+.date .icon{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 19rpx;
+}
+.line {
+    height: 24rpx;
+    background: #eee;
+    border-top: 1rpx solid #dcdcdc;
+}
+.pin{
+    border-bottom: 1rpx solid #ddd;
+}
+.pin text{
+    height: 96rpx;
+    line-height: 96rpx;
+    display: inline-block;
+    color:#333;
+}
+.pin .icon{
+    width: 48rpx;
+    height: 48rpx;
+    margin: 24rpx;
+    border-radius: 2rpx;
+}
+.tab{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100rpx;
+  border-bottom: 1rpx solid #c9c9c9;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.tab text{
+  display: inline-block;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #fff;
+  text-align: center;
+  color:#333;
+  width: 33.3%;
+}
+.tab .current{
+  border-bottom: 2rpx solid #f8b636
+}
+.characteristic{
+  padding: 14rpx;
+}
+.experience{
+  padding: 14rpx;
+  line-height: 44rpx;
+}
+.nav-title{
+  padding-bottom: 18rpx;
+  color:#333;
+}
+.nav-title image{
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 19rpx;
+}
+.hd .content image{
+    width: 100%;
+    height: 480rpx;
+    margin: 10rpx 0 0;
+}
+.hd .content text{
+   padding:10rpx 0 20rpx;
+}
+.schedule{
+  padding: 14rpx;
+}
+.schedule .item{
+  margin-bottom: 22rpx;
+}
+.day{
+  color:#f27b60;
+}
+.listed{
+    padding-top: 16rpx;
+    line-height: 42rpx;
+    color: #888271;
+}
+.listed .time{
+  padding-right: 14rpx;
+}
+.notice{
+  padding: 14rpx;
+}
+.notice .item{
+  padding-bottom: 12rpx;
+}
+.notice .num{
+    display: inline-block;
+    width: 48rpx;
+    text-align: center;
+}
+.notice .desc{
+  padding-left: 48rpx;
+}
+.captain{
+    padding: 48rpx 24rpx 24rpx 24rpx;
+    position: relative;
+}
+.captain text{
+  display: block;
+}
+.captain .name{
+  margin-bottom: 12rpx;
+  color:#333;
+}
+.breif{
+  color:#898989;
+  margin-bottom: 22rpx;
+}
+.breif .left{
+  margin-right: 22rpx;
+}
+.arrange{
+  margin: 20rpx 0 12rpx;display: block;
+}
+.portrait{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.invite{
+  
+}
+.invite navigator{
+  height: 92rpx;
+  line-height: 92rpx;
+  color:#333;
+  padding: 0 14rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.invite image{
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 28rpx;
+  margin-right: 10rpx;
+}
+.invite .inviter{
+  height: auto;
+  padding: 14rpx;
+}
+.inviter .avatar{
+  width: 94rpx;
+  height: 94rpx;
+  border-radius: 50%;
+}
+.inviter text{
+  display: block;
+  line-height: 40rpx;
+}
+.inviter .txt{
+  padding: 0 12rpx 0 15rpx;
+  color:#8d8777;
+}
+.inviter .name{
+  color:#333;
+  font-size: 36rpx;
+}
+.inviter .icon{
+  width: 24rpx;
+  height: 33rpx;
+  margin-right: 4rpx;
+  margin-top: 0;
+}
+.contact{
+  padding: 10rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+.contact text{
+  color:#8d8777;
+  margin-right: 24rpx;
+}
+.contact image{
+    width: 48rpx;
+    height: 46rpx;
+    display: inline-block;
+    margin: 20rpx 24rpx 0 0;
+}
+.bottom{
+    background: #f2c32c;
+    padding: 20rpx 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.bottom navigator, .bottom view{
+   box-sizing: border-box;
+   width: 50%;
+   text-align: center;
+   color:#333;
+   height: 75rpx;
+   line-height: 75rpx;
+}
+.bottom .drive{
+   border-right: 1rpx solid #333;
+}
+
+.captain_desc{clear: both;}
+.captain_name{margin-left: 15rpx;margin-top:8rpx;}
+.captain_desc{color: #f27b60;padding-top: 8rpx;}

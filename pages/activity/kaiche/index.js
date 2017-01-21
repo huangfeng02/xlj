@@ -17,7 +17,9 @@ Page({
         pintxt: "您是否愿意拼房",
         showPinFang: false,//是否显示拼房
         showDeductible: false,//是否显示为你节省了多少钱
-        discountClass:"icon-agree"//是否选中了路费抵扣 默认选中
+        discountClass:"icon-agree",//是否选中了路费抵扣 默认选中
+        tabBtnYes:"tapBtn-yes",//是否选中了拼房按钮 默认选中的class
+        tabBtnNo:"",//是否选中了路费抵扣 默认选中
     },
     onLoad:function(options){
         console.log(JSON.stringify(options))
@@ -28,7 +30,8 @@ Page({
             priceAdult:options.priceAdult,
             priceChild:options.priceChild,
             deductible:options.score,//路费抵扣
-            agio:options.priceExtro//单房差价
+            //agio:options.priceExtro//单房差价
+            agio:100//单房差价
         })
 
         wx.login({
@@ -45,11 +48,14 @@ Page({
 
     },
     tips_wp:function(n){
-        if(this.data.priceAdult!=0&&(this.data.priceAdult%2!=0)){
+        console.log(this.data.agio)
+        if(this.data.peopleAdult!=0&&(this.data.peopleAdult%2!=0)){
             if(this.data.agio>0){//可以拼房
                 if(n>0){
-                   // $("#show_pf_1").addClass("current")
-                   // $("#show_pf_0").removeClass("current")
+                    this.setData({
+                        tabBtnNo:'',
+                        tabBtnYes:'tapBtn-yes'
+                    })
                 }
                 this.setData({
                     showPinFang:true
@@ -60,6 +66,20 @@ Page({
                 showPinFang:false
             })
         }
+    },
+    pinNo:function(){
+        this.setData({
+            tabBtnNo:'tapBtn-yes',
+            tabBtnYes:''
+        })
+        this.getPrice()
+    },
+    pinYes:function(){
+        this.setData({
+            tabBtnNo:'',
+            tabBtnYes:'tapBtn-yes'
+        })
+        this.getPrice()
     },
     addAdult: function () {
         this.setData({
@@ -118,7 +138,11 @@ Page({
                     })
                 }
             }
+
             this.data.totlePrice = this.data.peopleAdult*this.data.priceAdult+this.data.peopleChild*this.data.priceChild;
+            if(this.data.tabBtnNo=="tapBtn-yes"){
+                this.data.totlePrice=this.data.totlePrice+this.data.agio;
+            }
         }else{
             this.setData({
                 pintxt:''
@@ -126,21 +150,12 @@ Page({
             this.data.totlePrice = this.data.peopleAdult*this.data.priceAdult+this.data.peopleChild*this.data.priceChild;
         }
 
-       /* if($("#show_pf_1").hasClass("current")){
-            totlePrice=totlePrice+parking;
-        }else{
-            if(!(numAdult%2)){
-                totlePrice=totlePrice+parking;
-            }else{
-                totlePrice=totlePrice+spreadPrice+parking;
-            }
-        }*/
-
         var savePrice=0;
         if (this.data.peopleAdult > 0 || this.data.peopleChild > 0) {
             if (this.data.discountClass=="icon-no-agree") {
                 this.setData({
-                    showDeductible:false
+                    showDeductible:false,
+                    totalPrice:this.data.totlePrice
                 })
             } else {
                 if(this.data.deductible>(this.data.totlePrice/2)){
@@ -154,7 +169,6 @@ Page({
                         deductible:savePrice
                     })
                 }
-                //this.data.totlePrice = this.data.totlePrice - savePrice;
                 this.setData({
                     totalPrice:this.data.totlePrice - savePrice,
                     showDeductible:true
@@ -163,7 +177,7 @@ Page({
         }else{
             this.setData({
                 totalPrice:0,
-                deductible:0,
+                //deductible:0,
                 showDeductible:false
             })
 
@@ -191,35 +205,36 @@ Page({
         var pay = this.data.totalPrice;
         var activityId =  this.data.activityId;
         var openId =  this.data.openId;
-        var integral =  this.data.deductible;
+       // var integral =  this.data.deductible;
         //var seat = $("#seat").html();
         var room = '';
-        if ($("#show_pf_1").hasClass('current')) {
-            room = parseInt($("#adultNum").html()) / 2;
+        if (this.data.tabBtnYes=="tapBtn-yes") {//拼房
+            room = parseInt(adult) / 2;
         } else {
-            room = Math.ceil(parseInt($("#adultNum").html()) / 2);
+            room = Math.ceil(parseInt(adult) / 2);
         }
 
-        var discount=0;
-        if ($(".icon-unselected").length ==0) {
-            discount = parseInt($("#minusPrice").html());
+        var discount=0;//路费抵扣
+        if (this.data.discountClass=="icon-agree") {
+            discount = this.data.deductible;
         }
+
         var isCar=1;
         var seat=0;
         if(adult==0){
-            utils.alertMsgTip("参加成人数不能为0")
+            console.log("大人人数不能为0")
             return;
         }
 
         if(adult==0&&child==0){
-            utils.alertMsgTip("参加人数不能为0")
+            console.log("参加人数不能为0")
             return;
         }
 
-        if(isAgree==0){
+       /* if(isAgree==0){
             utils.alertMsgTip("未同意服务条款")
             return;
-        }
+        }*/
 
         var ordersJson='{"id":"0","activityId":'+activityId+',"pay":'+pay+',"adult":'+adult+',"child":'
             +child+',"room":'+room+',"seat":'+seat+',"isCar":'+isCar+',"discount":'+discount+'}';
@@ -234,14 +249,14 @@ Page({
                 "ordersJson":ordersJson
             },
             success: function (res) {
+                console.log(JSON.stringify(res))
                 var orderId=res.data.data.orderId;
                 wx.request({
-                    url: app.host +"/wxpay/prepay?orderId="+orderId+"&openId="+openId,
+                    url: app.host +"/wxpay/prepay?orderId="+orderId+"&openId="+openId+"&type=1",
                     header: {
                         'content-type': 'application/json'
                     },
                     success: function(res) {
-
                         wx.requestPayment({
                             'timeStamp': res.data.data.timeStamp,
                             'nonceStr': res.data.data.nonceStr,
@@ -267,6 +282,7 @@ Page({
         })
 
 
+/*
         $.ajax({
             url: "/wxpay/getOrderId",
             data:{
@@ -330,6 +346,7 @@ Page({
 
             }
         })
+*/
 
 
 

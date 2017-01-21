@@ -3,9 +3,10 @@
     <image class="themeCover" src="{{imgUrl}}"></image>
 
     <view class="themeList">
-        <navigator url="navigate?title=navigate" hover-class="navigator-hover" wx:for="{{items}}">
+        <navigator url="/pages/theme/activity/activity?activityId={{item.activityId}}" hover-class="navigator-hover" wx:for="{{items}}">
             <view class="themeItem">
                 <image class="imgCover" src="{{item.imgUrl}}"></image>
+                <text class="tag">报名已截止</text>
                 <view class="main">
                     <text>{{item.title}}</text>
                     <view class="date">

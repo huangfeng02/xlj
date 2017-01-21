@@ -6,10 +6,7 @@ Page({
         reset: false,
         second: 60,
         phone: '',
-        subTxt: '提交',
-        encryptedData: '',
-        iv: '',
-        openid: ''
+        subTxt: '提交'
     },
     bindPhone: function (e) {
         this.setData({
@@ -73,16 +70,13 @@ Page({
         var _this = this;
         var data = {
             phone: phone,
-            verCode: code,
-            encryptedData: this.data.encryptedData,
-            iv: this.data.iv,
-            openid: this.data.openid
+            verCode: code
         }
         this.setData({
             subTxt: "提交中..."
         })
         wx.request({
-            url: app.host+"/wx/applet/bindAndLogin",
+            url: app.host+"/user/checkAndLogin",
             header: {
                 'content-type': 'application/json'
             },
@@ -90,20 +84,20 @@ Page({
             success: function (res) {
                 if (res.data.status == 0) {
                     var data=res.data.result;
-                    /*wx.setStorage({
+                    wx.setStorage({
                         key: "userInfo",
                         data: {
                             userId:data.userId,
                             createTime:data.createTime,
                             sid:data.sid
                         }
-                    })*/
+                    })
                    /* wx.switchTab({
                         url:'/pages/user/index'
                     })*/
-                    /*wx.navigateBack({
+                    wx.navigateBack({
                         delta: 1
-                    })*/
+                    })
                 }else{
                     wx.showModal({
                         title: '提示',
@@ -126,13 +120,6 @@ Page({
 
     },
     onLoad: function (options) {
-        console.log(JSON.stringify(options))
-        this.setData({
-            encryptedData:options.encryptedData,
-            iv:options.iv,
-            openid:options.openid
-        })
-
         // 页面初始化 options为页面跳转所带来的参数
     },
     onReady: function () {

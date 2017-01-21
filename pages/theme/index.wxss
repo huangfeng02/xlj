@@ -14,6 +14,17 @@ page {
     -moz-border-radius: 30rpx;
     border-radius: 30rpx;
     overflow: hidden;
+    position: relative;
+}
+.themeList .tag {
+    background: #ef7c5e;
+    display: inline-block;width: 235rpx;height: 55rpx;line-height: 55rpx;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    right: 0;top: 370rpx;font-size: 30rpx;
+    border-top-left-radius: 6rpx;
+    border-bottom-left-radius: 6rpx;
 }
 .themeList .main {
     background: #fff;
