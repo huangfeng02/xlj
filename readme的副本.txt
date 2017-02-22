@@ -7,6 +7,7 @@ https://tortoisegit.org/
 右键 tortoiseget push 提交 
 右键 tortoiseget add  添加新文件 
 右键 tortoiseget diff 比较 
+其他
 
 ...
 
